@@ -37,10 +37,6 @@ function stopTimer() {
     clearInterval(timerInterval);
 }
 
-// total mines = selector
-// lines = selector
-// columns = selector
-
 function generateBoard() {
     theGame.style.width = `${selector * pixels}px`;
     theGame.style.height = `${selector * pixels}px`;
@@ -136,7 +132,7 @@ function onRightClick(e) {
         flags.textContent = "🚩 : " + numberOfFlags;
     }  
     if (minesPlaced.every(x=>x.textContent == "🚩")) {
-        alert("you WON");
+        alert("You win!");
         stopTimer();
     }
 }
@@ -159,6 +155,3 @@ function showEmptyCells(cell) {
         }
     }
 }
-
-
-
