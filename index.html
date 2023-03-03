@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Minesweeper</title>
+</head>
+<body> 
+    <div name="gameTitle">
+        <center>
+            <h1>Minesweeper</h1><br>
+        </center>
+    </div>
+    <center>
+    <div id="firstPage" class="card" style="width: 40rem;">
+        <div class="card-header">
+            <h5>Game Board Dimensions</h5>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+                Choose your board size: 
+                <select id="selector">
+                    <option value="10">10x10</option>
+                    <option value="15">15x15</option>
+                    <option value="20">20x20</option>
+                </select><br>
+            </h5>
+            <a href="#" class="btn btn-primary" onclick="startGame()">START GAME</a><br>
+        </div>
+    </div>
+    </center>
+        <div id="header" class="header" style="width: 26rem;" hidden>
+            <div id="flags" class="flag"></div>
+                <div>
+                    <button id="resetButton" onClick="window.location.reload()">Restart</button>
+                </div>
+            <div id="timer" class="timer">00:00</div>
+        </div>
+    <center>
+        <div id="theGame">
+        </div>
+    </center>
+</body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
