@@ -143,14 +143,14 @@ function showEmptyCells(cell) {
     for (let i = row - 1; i <= row + 1; i++) {
         for (let j = col - 1; j <= col + 1; j++) {
             if (i >= 0 && i < selector && j >= 0 && j < selector && !mt[i][j].classList.contains('show')) {
-            if (!mt[i][j].value && !mt[i][j].classList.contains('mine')) {
-                mt[i][j].classList.add('show');
-                showEmptyCells(mt[i][j]);
-            }
-            else if (mt[i][j].value && !mt[i][j].classList.contains('mine')) {
-                mt[i][j].classList.add('show');
-                mt[i][j].textContent = mt[i][j].value;
-            }
+                if (!mt[i][j].value && !mt[i][j].classList.contains('mine')) {
+                    mt[i][j].classList.add('show');
+                    showEmptyCells(mt[i][j]);
+                }
+                else if (mt[i][j].value && !mt[i][j].classList.contains('mine')) {
+                    mt[i][j].classList.add('show');
+                    mt[i][j].textContent = mt[i][j].value;
+                }
             }
         }
     }
